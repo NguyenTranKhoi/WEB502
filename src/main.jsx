@@ -19,7 +19,7 @@ const ShowAge = props => <p>Tủi của bạn là: {props.age}</p>
 
 ReactDOM.render(
   <div>
-    <p>Tên:: {person.name}</p>
+    <p>Tên: {person.name}</p>
     <p>Tuổi: {person.age}</p>
     <p>{person.status ? "Đã hứa hôn" : "Chưa kết hôn"}</p>
     <ul>
