@@ -7,21 +7,17 @@ type Inputs = { //Kiểu dữ liệu của từng input
 };
 
 type ProductAddProps = {
-    name: string,
     onAdd: (product: Inputs) => void
 }
 
 const ProductAdd = (props: ProductAddProps) => {
-    //Khai báo các component sử dụng từ hook userFrom
-    //register: lấy dữ liêu từ input
-    //handleSubmit: validate input trc khi nhảy vào hàm onSubmit
     const { register, handleSubmit, formState: { errors } } = useForm<Inputs>()
     //Sử dụng hook useNavigate để chuyển trang
     const navigate = useNavigate()
     const onSubmit: SubmitHandler<Inputs> = (dataInput) => {
         props.onAdd(dataInput);
         //chuyển trang
-        navigate("/");
+        navigate("/amdin/product");
     }
     return (
         <div>
