@@ -5,13 +5,14 @@ import ShowInfo from './components/ShowInfo'
 
 import { Products } from './types/products'
 import { Navigate, NavLink, Route, Routes } from 'react-router-dom'
-import { list } from './api/product'
+import { add, list } from './api/product'
 import HomePage from './pages/HomePage'
 import ProductPage from './pages/ProductPage'
 import ProductDetail from './pages/ProductDetail'
 import AdminLayouts from './pages/layouts/Adminlayouts'
 import Dashboard from './pages/Dashboard'
 import WebsiteLayout from './pages/layouts/Websitelayout'
+import ProductAdd from './pages/ProductAdd'
 
 
 function App() {
@@ -23,7 +24,15 @@ function App() {
             setProducts(data);
         }
         getProducts();
-    }, [])
+    }, []);
+
+    const onHandleAdd = async (product: any) => {
+        console.log('app.js', product);
+        //api
+        const { data } = await add(product);
+        //reRender
+        setProducts([...products, data]);
+    }
 
     return (
         <div className="App">
@@ -40,6 +49,7 @@ function App() {
                         <Route index element={<HomePage />} />
                         <Route path="product" element={<ProductPage />} />
                         <Route path="/product/:id" element={<ProductDetail />} />
+                        <Route path="/product/add" element={<ProductAdd name="Khooi" onAdd={onHandleAdd} />} />
                     </Route>
                     <Route path="admin" element={<AdminLayouts />}>
                         <Route index element={<Navigate to="dashboard" />} />
