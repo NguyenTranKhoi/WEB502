@@ -1,7 +1,7 @@
-import { Products } from "../types/products";
+import { ProductType } from "../types/products";
 
 type ShowInfoProps = {
-    person: Products
+    person: ProductType
 }
 const ShowInfo = (props: ShowInfoProps) => {
     console.log(props);
