@@ -10,7 +10,7 @@ type ProductManagerProps = {
 const ProductManager = (props: ProductManagerProps) => {
     return (
         <div>
-            <table className='table table-bordered'>
+            <table className="table table-bordered">
                 <tbody>
                     {props.products.map((item, index) => {
                         return <tr>

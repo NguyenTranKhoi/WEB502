@@ -17,7 +17,7 @@ const ProductAdd = (props: ProductAddProps) => {
     const onSubmit: SubmitHandler<Inputs> = (dataInput) => {
         props.onAdd(dataInput);
         //chuyển trang
-        navigate("/amdin/product");
+        navigate("/admin/product");
     }
     return (
         <div>

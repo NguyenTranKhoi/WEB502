@@ -18,9 +18,12 @@
   },
   "products": [
     {
-      "name": "Product A",
-      "price": "500",
-      "id": 1
+      "name": "hú",
+      "price": "10",
+      "id": 4
+    },
+    {
+      "id": 5
     }
   ]
 }
