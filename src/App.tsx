@@ -53,9 +53,9 @@ function App() {
         <div className="App">
             <header>
                 <ul>
-                    <li><NavLink to="">Home Page</NavLink></li>
-                    <li><NavLink to="">Product</NavLink></li>
-                    <li><NavLink to="">About</NavLink></li>
+                    <li><NavLink to="/">Home Page</NavLink></li>
+                    <li><NavLink to="/">Product</NavLink></li>
+                    <li><NavLink to="/">About</NavLink></li>
                 </ul>
             </header>
             <main>
